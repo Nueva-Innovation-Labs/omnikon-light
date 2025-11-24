@@ -1,7 +1,7 @@
 # SIR JOHN NUEVA
 **Founder & Lead Architect – Nueva Innovation Labs**  
-Email: sirjohn.nueva@gmail.com | Mobile: +63 (998) 2895469  
-LinkedIn: (Add your profile link)  
+Email: sirjohn@nueva-innovation.com  
+LinkedIn: https://www.linkedin.com/in/sir-john-nueva/
 Website: https://nueva-innovation.com
 
 ## PROFESSIONAL SUMMARY
