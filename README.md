@@ -1,6 +1,6 @@
 # Omnikon Light – Ignition Prototype v0.1
 
-**Nueva Innovation Labs** | Forged by Sir John Nueva (Senior Software Engineer, 20+ years in high-volume Java/Spring ecosystems, Optum Global Solutions).
+**Nueva Innovation Labs** | Forged by Sir John Nueva (Senior Software Engineer, 20+ years in high-volume Java/Spring ecosystems).
 
 The sovereign AI-native operating system: Complex agents awaken at boot, owning the machine from kernel init to UI. Ubuntu 25.04 base (deblobbed, immutable root via dm-verity), powered by Llama 3.1 8B (Q5_K_M GGUF) + CUDA acceleration on target hardware.
 
