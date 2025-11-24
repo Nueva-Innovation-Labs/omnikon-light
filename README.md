@@ -12,7 +12,7 @@ The sovereign AI-native OS: Complex agents own the machine from kernel init. Ubu
 ## Ritual  
 1. Prep: CUDA 12.1, VFIO bind GPU PCI (lspci | grep NVIDIA).  
 2. Build: `./build.sh --gpu-passthrough` (llama.cpp + Modelfile).  
-3. Burn/Boot: dd ISO → USB → GRUB → "Sir John Nueva, the system is yours."  
+3. Burn/Boot: dd ISO → USB → GRUB  
 
 [BUILD.md](docs/BUILD.md) | [CONTRIBUTING.md](CONTRIBUTING.md)  
 License: GPL-3.0 | © 2025 Nueva Innovation Labs | [nueva-innovation.com](https://nueva-innovation.com) (Coming Soon)  
