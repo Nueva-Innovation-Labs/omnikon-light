@@ -24,8 +24,6 @@ The sovereign AI-native operating system: Complex agents awaken at boot, owning 
 - **Ascension (Q2 2026)**: Quantum-resistant crypto, offline LLM kernel access.
 - **Dominion (Q4 2026)**: Full musl libc fork, <3MB kernel.
 
-Maps to your expertise: Think microservices (Spring Boot) → agent swarms; GraphQL fetches → vsock queries for Face UI (Angular WASM stub incoming).
-
 ## Legal & Compliance
 - Based on Ubuntu 25.04 (GPL-3.0 compliant; source in monorepo).
 - © 2025 Nueva Innovation Labs | [nueva-innovation.com](https://nueva-innovation.com) (Landing soon).
