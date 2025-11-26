@@ -15,7 +15,7 @@ Forged by Sir John Nueva | Nueva Innovation Labs | 25 November 2025
 sudo apt update
 sudo apt install build-essential cmake git curl gcc-12 g++-12 nvidia-cuda-toolkit git-lfs
 git lfs install
-
+````
 #### What You Need to Work on the Prototype  
 **Hardware Requirements:**  
 - CPU: AMD Ryzen Threadripper 1920X (24 cores/48 threads – leverages parallel compilation for kernel and Rust builds).  
