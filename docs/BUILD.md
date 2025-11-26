@@ -99,7 +99,7 @@ If missing anything, install via `sudo apt update && sudo apt install [packages]
      ```  
      
     - Other model (Optional)
-     ```  
+     ```bash   
       wget --header="Authorization: Bearer {your token here}" \
       -c https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
 
