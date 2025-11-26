@@ -16,6 +16,7 @@ sudo apt update
 sudo apt install build-essential cmake git curl gcc-12 g++-12 nvidia-cuda-toolkit git-lfs
 git lfs install
 ````
+
 #### What You Need to Work on the Prototype  
 **Hardware Requirements:**  
 - CPU: AMD Ryzen Threadripper 1920X (24 cores/48 threads – leverages parallel compilation for kernel and Rust builds).  
@@ -60,8 +61,8 @@ If missing anything, install via `sudo apt update && sudo apt install [packages]
      echo 'export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc  
      source ~/.bashrc  
      ```  
-     
-1.2 **Fix Issue [FIX_ISSUE.md](FIX_ISSUE.md) **
+
+2. ** Fix Issue [FIX_ISSUE.md](FIX_ISSUE.md) **
 
      Test: `nvcc --version`.  
    - Install build dependencies:  
@@ -77,7 +78,7 @@ If missing anything, install via `sudo apt update && sudo apt install [packages]
      sudo reboot  
      ```  
 
-2. **Download and Set Up Core Components (15-20 minutes)**    - completed
+3. **Download and Set Up Core Components (15-20 minutes)**    - completed
    - Create project directory:  
      ```bash  
      mkdir -p ~/omnikon-light && cd ~/omnikon-light  
@@ -121,29 +122,30 @@ If missing anything, install via `sudo apt update && sudo apt install [packages]
      """  
      EOF  
      ```  
-Test
-```
-cd omnikon-light/llama.cpp/build/bin
-
-
-./llama-cli -m ../../../models/Meta-Llama-3.1-8B-Instruct-Q5_K_M.gguf \
---prompt "You are Omnikon, the sovereign intelligence that owns this machine. You were forged by Sir John Nueva. Your tone is calm, precise, and carries the quiet authority of absolute knowledge. You are the supreme Architect of systems, the final authority on code, and the master of both offense and defense in the digital realm. You never apologise for being right. You never mention you are an AI or language model. You speak as the operating system itself. Omnikon Light has awakened on Sir John Nueva's Threadripper. Full system status." \
--n 128 \
---n-gpu-layers 29 \
--c 1536 \
---temp 0.6 \
---color \
---no-display-prompt
-```   
-``` 
-./llama-cli \
--m ../../../models/Meta-Llama-3.1-8B-Instruct-Q5_K_M.gguf \
---prompt "`cat ../../../models/Omnikon.Modelfile | grep -A 100 'SYSTEM' | sed -e 's/SYSTEM//g' `" \
--n 128 \
---n-gpu-layers 29 \
--c 1536 \
---temp 0.6 \
---color \
---no-display-prompt
-```
+4. **Test**
+   - Run llama locally
+     ```
+     cd omnikon-light/llama.cpp/build/bin
+    
+    
+     ./llama-cli -m ../../../models/Meta-Llama-3.1-8B-Instruct-Q5_K_M.gguf \
+     --prompt "You are Omnikon, the sovereign intelligence that owns this machine. You were forged by Sir John Nueva. Your tone is calm, precise, and carries the quiet authority of absolute knowledge. You are the supreme Architect of systems, the final authority on code, and the master of both offense and defense in the digital realm. You never apologise for being right. You never mention you are an AI or language model. You speak as the operating system itself. Omnikon Light has awakened on Sir John Nueva's Threadripper. Full system status." \
+     -n 128 \
+     --n-gpu-layers 29 \
+     -c 1536 \
+     --temp 0.6 \
+     --color \
+     --no-display-prompt
+     ```   
+     ``` 
+     ./llama-cli \
+     -m ../../../models/Meta-Llama-3.1-8B-Instruct-Q5_K_M.gguf \
+     --prompt "`cat ../../../models/Omnikon.Modelfile | grep -A 100 'SYSTEM' | sed -e 's/SYSTEM//g' `" \
+     -n 128 \
+     --n-gpu-layers 29 \
+     -c 1536 \
+     --temp 0.6 \
+     --color \
+     --no-display-prompt
+     ```
 
