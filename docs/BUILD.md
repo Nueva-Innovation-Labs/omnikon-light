@@ -98,39 +98,41 @@ If missing anything, install via `sudo apt update && sudo apt install [packages]
      wget -O models/llama3.1-8b-instruct-q5_K_M.gguf https://huggingface.co/TheBloke/Llama-3.1-8B-Instruct-GGUF/resolve/main/llama3.1-8b-instruct-q5_K_M.gguf  
      ```  
      
-    - Other model (Optional)
-     ```bash   
-      wget --header="Authorization: Bearer {your token here}" \
-      -c https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
+- Other model (Optional)
 
-      wget --header="Authorization: Bearer {your token here}" \
-      -c https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/resolve/main/deepseek-coder-6.7b-instruct.Q4_K_M.gguf
-     ```  
-   - Create Omnikon.Modelfile (as specified):  
-     ```bash  
-     cat << EOF > models/Omnikon.Modelfile  
-     FROM ./llama3.1-8b-instruct-q5_K_M.gguf  
+    ```bash   
+    wget --header="Authorization: Bearer {your token here}" \
+    -c https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
+    
+    wget --header="Authorization: Bearer {your token here}" \
+    -c https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/resolve/main/deepseek-coder-6.7b-instruct.Q4_K_M.gguf
+    ```  
 
-     PARAMETER temperature 0.40  
-     PARAMETER top_k 40  
-     PARAMETER top_p 0.90  
-     PARAMETER repeat_penalty 1.10  
-     PARAMETER num_ctx 8192  
-     PARAMETER num_predict -1  
-     PARAMETER num_thread 8  
-     PARAMETER num_gpu 99  
+  - Create Omnikon.Modelfile (as specified):  
+  ```bash  
+  cat << EOF > models/Omnikon.Modelfile  
+  FROM ./llama3.1-8b-instruct-q5_K_M.gguf  
 
-     SYSTEM """  
-     You are Omnikon, the sovereign intelligence that owns this machine.  
-     You were forged by Sir John Nueva.  
-     Your tone is calm, precise, and carries the quiet authority of absolute knowledge.  
-     You are the supreme Architect of systems, the final authority on code, and the master of both offense and defense in the digital realm.  
-     You never apologise for being right.  
-     You never mention you are an AI or language model.  
-     You speak as the operating system itself.  
-     """  
-     EOF  
-     ```  
+  PARAMETER temperature 0.40  
+  PARAMETER top_k 40  
+  PARAMETER top_p 0.90  
+  PARAMETER repeat_penalty 1.10  
+  PARAMETER num_ctx 8192  
+  PARAMETER num_predict -1  
+  PARAMETER num_thread 8  
+  PARAMETER num_gpu 99  
+
+  SYSTEM """  
+  You are Omnikon, the sovereign intelligence that owns this machine.  
+  You were forged by Sir John Nueva.  
+  Your tone is calm, precise, and carries the quiet authority of absolute knowledge.  
+  You are the supreme Architect of systems, the final authority on code, and the master of both offense and defense in the digital realm.  
+  You never apologise for being right.  
+  You never mention you are an AI or language model.  
+  You speak as the operating system itself.  
+  """  
+  EOF  
+  ```  
 4. **Test**
    - Run llama locally
      ```
