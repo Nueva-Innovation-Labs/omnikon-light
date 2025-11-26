@@ -97,6 +97,15 @@ If missing anything, install via `sudo apt update && sudo apt install [packages]
      mkdir models  
      wget -O models/llama3.1-8b-instruct-q5_K_M.gguf https://huggingface.co/TheBloke/Llama-3.1-8B-Instruct-GGUF/resolve/main/llama3.1-8b-instruct-q5_K_M.gguf  
      ```  
+     
+    - Other model (Optional)
+
+      wget --header="Authorization: Bearer {your token here}" \
+      -c https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
+
+      wget --header="Authorization: Bearer {your token here}" \
+      -c https://huggingface.co/TheBloke/deepseek-coder-6.7B-instruct-GGUF/resolve/main/deepseek-coder-6.7b-instruct.Q4_K_M.gguf
+
    - Create Omnikon.Modelfile (as specified):  
      ```bash  
      cat << EOF > models/Omnikon.Modelfile  
